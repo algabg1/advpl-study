@@ -1,0 +1,361 @@
+#INCLUDE 'FWMVCDEF.CH'
+#INCLUDE 'TOTVS.CH'
+
+**********************
+User Function TRREL0014
+**********************
+Local c_Area		:=GetArea()
+Local titulo  		:= "Contas a receber por Natureza - "
+
+Private lEnd         := .F.
+Private lAbortPrint  := .F.
+Private limite       := 120
+Private tamanho      := "M"
+Private nomeprog     := "TRREL0014"
+Private nTipo        := 18
+Private aReturn      := { "Zebrado", 1, "Administracao", 2, 2, 1, "", 1}
+Private nLastKey     := 0
+Private c_Perg       := PADR("TRREL0014",10)
+Private cbtxt        := Space(10)
+Private cbcont       := 00
+Private CONTFL       := 01
+Private m_pag        := 01
+Private wnrel        := "TRREL0014"
+Private cString      := "SE1"
+Private c_Enter 	:=CHR(13)+CHR(10)
+
+f_CriaPerg(c_Perg)
+
+If 	Pergunte(c_Perg,.T.)=.T.
+	oReport:=ReportDef(Titulo)
+	oReport:PrintDialog()
+Endif
+
+RestArea(c_Area)
+
+Return
+
+*********************************
+Static Function ReportDef(Titulo) //estrutura
+*********************************
+Local oReport
+
+//						nome do relatorio, titulo,	grupo de perguntas,		bloco de execucao,				header
+oReport:=TReport():New(	    "TRREL0014",	Titulo,		c_Perg,			{|oReport| PrintReport(oReport)},	Titulo)
+oReport:SetLandscape()  //orientacao paisagem
+oReport:DisableOrientation() //trava pro usuario nao mexer na orientacao
+
+oSecITENS := TRSection():New(oReport,"ITENS") //exibicao das linhas do relatorio
+oSecITENS:lEdit := .T.	
+
+// cria coluna				campo					titulo				tamanho
+TRCell():New(oSecITENS, 	"c_Forn"			,, "Cliente"		,, 	50)
+TRCell():New(oSecITENS, 	"c_Pref"			,, "Prf"			,, 	5)
+TRCell():New(oSecITENS, 	"c_Titulo"			,, "Título"			,, 	20)
+TRCell():New(oSecITENS, 	"c_Pc"				,, "Pc"				,, 	6)
+TRCell():New(oSecITENS, 	"c_Tp"				,, "Tp"				,, 	5)
+TRCell():New(oSecITENS, 	"c_CC"				,, "Centro Custo"	,, 	20)
+TRCell():New(oSecITENS, 	"c_Nat"				,, "Natureza"		,, 	50)
+TRCell():New(oSecITENS, 	"c_Emiss"			,, "Emissão"		,, 	20)
+TRCell():New(oSecITENS, 	"c_Venc"			,, "Vencimento"		,, 	20)
+TRCell():New(oSecITENS, 	"n_VlrCC" 			,, "Vlr.CC"			,X3Picture("E1_VALOR"),20,,,"RIGH",,"RIGH")	
+TRCell():New(oSecITENS, 	"n_Saldo" 			,, "Saldo"			,X3Picture("E1_VALOR"),20,,,"RIGH",,"RIGH")	
+TRCell():New(oSecITENS, 	"n_VlrTit" 			,, "Vlr.Tit"		,, 	20,,,"RIGH",,"RIGH")
+TRCell():New(oSecITENS, 	"c_Hist"			,, "Histórico"		,, 	50)
+
+// X3Picture = formatacao do valor (moeda)
+
+oReport:lTotalInLine := .F.
+
+Return oReport      
+
+************************************
+Static Function PrintReport(oReport) 
+************************************
+Local oSecITENS		:= 	oReport:Section(1)
+Local nTotBruto 	:= 0
+Local nTotSaldo 	:= 0
+Local nTotFil		:=0
+Local nSalFil		:=0
+Local nTotNat  		:= 0
+Local nSalNat  		:= 0
+Local c_Alias   	:=GetNextAlias()
+
+oReport:nRow := 140
+
+f_ObtDados(c_Alias)
+
+dbSelectArea(c_Alias) //abre
+(c_Alias)->( DbGoTop() )
+
+While (c_Alias)->( !Eof() ) //ate o final do arquivo
+
+	c_Filial := (c_Alias)->E1_FILIAL
+	nTotFil:=0
+	nSalFil:=0
+
+	While (c_Alias)->(!EOF())	.And. AllTrim(c_Filial) == AllTrim((c_Alias)->E1_FILIAL) // enquanto for a mesma filial
+
+		cNat     := (c_Alias)->NATUREZ
+		cDescNat := (c_Alias)->ED_DESCRIC
+		nTotNat  := 0
+		nSalNat  := 0
+
+		Do While (c_Alias)->(!EOF()) .And. AllTrim(c_Filial) == AllTrim((c_Alias)->E1_FILIAL) .And. AllTrim(cNat) = AllTrim((c_Alias)->NATUREZ) // enquanto for a mesma filial e mesma natureza
+			oSecITENS:Init()
+			oSecITENS:Cell("c_Forn"):SetValue( (c_Alias)->E1_CLIENTE + "/" + (c_Alias)->E1_LOJA + " " + Substr((c_Alias)->E1_NOMCLI,1,20) )
+			oSecITENS:Cell("c_Pref"):SetValue( (c_Alias)->E1_PREFIXO )
+			oSecITENS:Cell("c_Titulo"):SetValue( (c_Alias)->E1_NUM )
+			oSecITENS:Cell("c_Pc"):SetValue( (c_Alias)->E1_PARCELA )
+			oSecITENS:Cell("c_Tp"):SetValue( (c_Alias)->E1_TIPO )
+			oSecITENS:Cell("c_CC"):SetValue( (c_Alias)->CCUSTO )
+			oSecITENS:Cell("c_Nat"):SetValue( Alltrim( (c_Alias)->NATUREZ ) +'-'+ Alltrim( cDescNat ) )
+			oSecITENS:Cell("c_Emiss"):SetValue( Dtoc(Stod((c_Alias)->E1_EMISSAO)) ) //string -> data -> texto
+			oSecITENS:Cell("c_Venc"):SetValue( Dtoc(Stod((c_Alias)->E1_VENCREA)) ) 	//string -> data -> texto
+			oSecITENS:Cell("n_VlrCC"):SetValue( (c_Alias)->VALOR )
+			oSecITENS:Cell("n_Saldo"):SetValue( ((c_Alias)->E1_SALDO * (c_Alias)->PERC) )
+			oSecITENS:Cell("n_VlrTit"):SetValue( Transform((c_Alias)->E1_VALOR,"@E 999,999,999.99") ) //usa formatacao do valor
+			oSecITENS:Cell("c_Hist"):SetValue( (c_Alias)->E1_HIST )
+
+			oSecITENS:PrintLine()
+
+			nTotNat   += (c_Alias)->VALOR
+			nTotFil   += (c_Alias)->VALOR
+			nTotBruto += (c_Alias)->VALOR
+			nSalNat   += (c_Alias)->E1_SALDO * (c_Alias)->PERC
+			nSalFil   += (c_Alias)->E1_SALDO * (c_Alias)->PERC
+			nTotSaldo += (c_Alias)->E1_SALDO * (c_Alias)->PERC
+
+			(c_Alias)->(dbSkip()) //proximo
+
+		Enddo //acaba natureza
+
+		oSecITENS:Init()
+		oSecITENS:Cell("c_Forn"):SetValue( "TOTAL NAT. " + AllTrim(cNat) + " " + AllTrim(cDescNat) )
+		oSecITENS:Cell("n_VlrCC"):SetValue( nTotNat )
+		oSecITENS:Cell("n_Saldo"):SetValue( nSalNat )
+		oSecITENS:Cell("c_Pref"):SetValue( '' )
+		oSecITENS:Cell("c_Titulo"):SetValue( '' )
+		oSecITENS:Cell("c_Pc"):SetValue( '' )
+		oSecITENS:Cell("c_Tp"):SetValue( '' )
+		oSecITENS:Cell("c_CC"):SetValue( '' )
+		oSecITENS:Cell("c_Nat"):SetValue( '' )
+		oSecITENS:Cell("c_Emiss"):SetValue( '' )
+		oSecITENS:Cell("c_Venc"):SetValue( '' )
+		oSecITENS:Cell("n_VlrTit"):SetValue( '' )
+		oSecITENS:Cell("c_Hist"):SetValue( '' )
+
+		oSecITENS:PrintLine()
+		oReport:SkipLine() //proximo
+
+	EndDo // acaba filial
+
+	oSecITENS:Init()
+	oSecITENS:Cell("c_Forn"):SetValue( "TOTAL FILIAL " + AllTrim(c_Filial) )
+	oSecITENS:Cell("n_VlrCC"):SetValue( nTotFil )
+	oSecITENS:Cell("n_Saldo"):SetValue( nSalFil )
+	oSecITENS:Cell("c_Pref"):SetValue( '' )
+	oSecITENS:Cell("c_Titulo"):SetValue( '' )
+	oSecITENS:Cell("c_Pc"):SetValue( '' )
+	oSecITENS:Cell("c_Tp"):SetValue( '' )
+	oSecITENS:Cell("c_CC"):SetValue( '' )
+	oSecITENS:Cell("c_Nat"):SetValue( '' )
+	oSecITENS:Cell("c_Emiss"):SetValue( '' )
+	oSecITENS:Cell("c_Venc"):SetValue( '' )
+	oSecITENS:Cell("n_VlrTit"):SetValue( '' )
+	oSecITENS:Cell("c_Hist"):SetValue( '' )
+
+	oSecITENS:PrintLine()
+	oReport:SkipLine()
+
+EndDo // acaba arquivo
+
+oSecITENS:Init()
+oSecITENS:Cell("c_Forn"):SetValue( "T O T A L   G E R A L " )
+oSecITENS:Cell("n_VlrCC"):SetValue( nTotBruto )
+oSecITENS:Cell("n_Saldo"):SetValue( nTotSaldo )
+
+oSecITENS:PrintLine()
+
+oSecITENS:Finish()		
+
+(c_Alias)->( DbCloseArea() ) //fecha
+
+oReport:EndPage()
+
+return  
+
+***********************************
+Static Function f_ObtDados(c_Alias)
+***********************************
+
+//Obter dados | SE1 conta a receber | SED naturezas financeiras | CTT centro de custo
+
+beginSQL alias c_Alias
+
+	SELECT E1_FILIAL, E1_PREFIXO, E1_NUM, E1_PARCELA, E1_TIPO, E1_NATUREZ AS NATUREZ, E1_CLIENTE, E1_LOJA, E1_NOMCLI, E1_EMISSAO,  
+		E1_VENCTO, E1_VENCREA, E1_VALOR AS VALOR, E1_SALDO, E1_VALOR, E1_HIST, E1_CCUSTO AS CCUSTO, 1 AS PERC, CTT_DESC01, ED_DESCRIC, E1_BAIXA  
+	FROM %table:SE1% SE1  
+		LEFT JOIN %table:SED% SED ON LTRIM(RTRIM(ED_CODIGO))=LTRIM(RTRIM(E1_NATUREZ))  
+			AND SED.%NotDel%
+		LEFT JOIN %table:CTT% CTT ON CTT_CUSTO = E1_CCUSTO AND CTT.%NotDel% 
+	WHERE SE1.%NotDel%
+		AND SUBSTRING(E1_VENCREA,1,4)=%exp:mv_par01%
+		AND SUBSTRING(E1_VENCREA,5,2) BETWEEN %exp:mv_par04% AND %exp:mv_par05% 
+		AND E1_FILIAL BETWEEN %exp:mv_par02% AND %exp:mv_par03% 
+
+	ORDER BY E1_FILIAL, E1_NATUREZ  
+
+endsql
+
+Memowrite("C:\TEMP\TRREL0014.TXT",getlastquery()[2])		// salva a query
+
+Return
+
+****************************
+Static Function f_GeraPlan()
+****************************
+Local o_Explorer:=clsExplorer():New()
+Local c_Hora    :=Substr(Time(),1,2)+Substr(Time(),4,2)
+Local c_Arquivo	:="TRREL0014"+DtoS(Date())+"_"+c_Hora+".xls"
+Local c_Caminho	:=""
+Local c_TitPlan :='Planilha dos Valores Previstos no ano de ' + mv_par01
+Local l_Ret 	:=.T.
+
+Private c_Destino	:=""
+Private o_Excel		:=FWMsExcelEx():New()
+Private c_Alias		:=GetNextAlias()
+
+c_Caminho:=Alltrim(mv_par02)
+If 	Right(c_Caminho,1)<>"\"
+	c_Caminho+="\"
+Endif
+
+If  !o_Explorer:mtdExistePasta(c_Caminho)
+    If  !o_Explorer:mtdCriaPasta(c_Caminho)
+        Alert("Falha ao tentar a criar pasta " +  c_Caminho + ". Procure o setor de TI!")
+        l_Ret:=.F.
+    Endif
+EndIf
+
+If  l_Ret=.T.
+	c_Destino:=c_Caminho+c_Arquivo
+
+	FwMsgRun(,{|oSay| l_Ret := f_CriaExcel(c_TitPlan)},"Criando estrutura do relatorio","Aguarde....Montando colunas..." )
+
+    //Ativando o arquivo e gerando o xml
+    o_Excel:Activate()
+    o_Excel:GetXMLFile( c_Destino )
+               
+    //Tentando abrir o objeto
+    n_Ret := ShellExecute("open", c_Destino, "", "", 3)
+			     
+    //Se houver algum erro
+	If  n_Ret <= 32
+		MsgStop("Não foi possível abrir o arquivo " +c_Destino+ "!", "Atencao")
+        l_Ret:=.F.
+	EndIf 
+
+EndIf
+
+Return 
+
+**************************************
+Static Function f_CriaExcel(c_TitPlan)
+**************************************
+Local l_Ret		:=.T.
+Private c_Alias2 := GetNextAlias()
+
+//Adicionando as Colunas
+o_Excel:SetCelFont('Courier New')
+o_Excel:SetCelItalic(.F.)
+o_Excel:SetCelUnderLine(.T.)
+o_Excel:SetCelSizeFont(10)
+o_Excel:SetCelFrColor("#FFFFFF")
+o_Excel:SetCelBgColor("#001c33")
+o_Excel:SetTitleBold(.T.)
+o_Excel:SetHeaderBold(.T.)
+
+o_Excel:AddworkSheet("Parametro") //aba
+o_Excel:AddTable("Parametro","Parametros")
+
+o_Excel:AddColumn("Parametro","Parametros",'PARAMETRO',1)
+o_Excel:AddColumn("Parametro","Parametros",'CONTEUDO',1)
+
+o_Excel:AddRow( "Parametro", "Parametros", { 'Ano'		        , mv_par01 	} )
+o_Excel:AddRow( "Parametro", "Parametros", { 'Filial de'		, mv_par02 	} )
+o_Excel:AddRow( "Parametro", "Parametros", { 'Filial até'		, mv_par03 	} )
+o_Excel:AddRow( "Parametro", "Parametros", { 'Mês de'			, mv_par04 	} )
+o_Excel:AddRow( "Parametro", "Parametros", { 'Mês até'			, mv_par05 	} )
+
+
+o_Excel:AddworkSheet("Planilha") //aba
+o_Excel:AddTable("Planilha",c_TitPlan)
+
+o_Excel:AddColumn("Planilha",c_TitPlan,"FILIAL	"				,1)	//EX_FILIAL	
+o_Excel:AddColumn("Planilha",c_TitPlan,"NATUREZA"				,1)	//EX_NATUREZ	
+o_Excel:AddColumn("Planilha",c_TitPlan,"DESCRIÇÃO"				,1)	//EX_DESCNAT		
+o_Excel:AddColumn("Planilha",c_TitPlan,"JANEIRO"				,3)	//EX_VAL01	
+o_Excel:AddColumn("Planilha",c_TitPlan,"FEVEREIRO"				,3)	//EX_VAL02	
+o_Excel:AddColumn("Planilha",c_TitPlan,"MARÇO"					,3)	//EX_VAL03		
+o_Excel:AddColumn("Planilha",c_TitPlan,"ABRIL"					,3)	//EX_VAL04
+o_Excel:AddColumn("Planilha",c_TitPlan,"MAIO"					,3)	//EX_VAL05	
+o_Excel:AddColumn("Planilha",c_TitPlan,"JUNHO"					,3)	//EX_VAL06	
+o_Excel:AddColumn("Planilha",c_TitPlan,"JULHO"					,3)	//EX_VAL07	
+o_Excel:AddColumn("Planilha",c_TitPlan,"AGOSTO"					,3)	//EX_VAL08		
+o_Excel:AddColumn("Planilha",c_TitPlan,"SETEMBRO"				,3)	//EX_VAL09	
+o_Excel:AddColumn("Planilha",c_TitPlan,"OUTUBRO"				,3)	//EX_VAL10	
+o_Excel:AddColumn("Planilha",c_TitPlan,"NOVEMBRO"				,3)	//EX_VAL11	
+o_Excel:AddColumn("Planilha",c_TitPlan,"DEZEMBRO"				,3)	//EX_VAL12	
+
+dbSelectArea(c_Alias2) //abre
+dbSetOrder(1)
+dbGoTop()
+Do 	While (c_Alias2)->(Eof())=.F. //ate fim do arquivo
+
+	o_Excel:AddRow("Planilha",c_TitPlan,	;
+		{									;
+			(c_Alias2)->EX_FILIAL		,	;
+			(c_Alias2)->EX_NATUREZ		,	;
+			(c_Alias2)->EX_DESCNAT		,	;
+			(c_Alias2)->EX_VAL01		,	;
+			(c_Alias2)->EX_VAL02		,	;
+			(c_Alias2)->EX_VAL03		,	;
+			(c_Alias2)->EX_VAL04		,	;
+			(c_Alias2)->EX_VAL05  	    ,	;
+			(c_Alias2)->EX_VAL06		,	;
+			(c_Alias2)->EX_VAL07		,	;
+			(c_Alias2)->EX_VAL08		,	;
+			(c_Alias2)->EX_VAL09		,	;
+			(c_Alias2)->EX_VAL10		,	;
+			(c_Alias2)->EX_VAL11		,	;
+			(c_Alias2)->EX_VAL12			;
+		})
+
+	(c_Alias2)->(dbSkip()) //proximo
+
+Enddo
+
+Return(l_Ret)
+
+**********************************
+Static Function f_CriaPerg(c_Perg)
+**********************************
+Local a_Area 	:= GetArea()
+
+Private o_perg   :=	clsComponentes():new() //mexe na SX1 = taela de perguntas | telas de parametros
+
+c_Perg := PADR(c_Perg,10)
+
+//				 X1_GRUPO	, X1_ORDEM	, X1_PERGUNT		, X1_PERSPA	, X1_PERENG	, X1_VARIAVL, X1_TIPO	, X1_TAMANHO			, X1_DECIMAL, X1_PRESEL	, X1_GSC	, X1_VALID	, X1_VAR01	, 	X1_DEF01	, X1_DEFSPA1, X1_DEFENG1, X1_CNT01	, X1_VAR02, 	X1_DEF02		, X1_DEFSPA2, X1_DEFENG2, X1_CNT02	, X1_VAR03	, 	X1_DEF03		, X1_DEFSPA3, X1_DEFENG3, X1_CNT03	, X1_VAR04	, X1_DEF04		, X1_DEFSPA4, X1_DEFENG4, X1_CNT04	, X1_VAR05	, X1_DEF05	, X1_DEFSPA5, X1_DEFENG5, X1_CNT05	, X1_F3	, X1_PYME	, X1_GRPSXG	, X1_HELP	, X1_PICTURE, X1_IDFIL
+o_perg:mtdPutSX1(c_Perg		,"01"		,"Ano			    ",		"",			"",		"mv_ch1",	"C",	4	                    ,0			,0			,"G"		,		""	,"mv_par01"	,		""		,		""	,		""	,		""	,		"",			""			,		""	,		""	,		""	,		""	,		""			,		""	,		""	,		""	,		""	,		""		,		""	,		""	,		""	,		""	,		""	,		""	,		""	,		""	, ""	,		""	,		""	,		""	,		""	,  ""	)
+o_perg:mtdPutSX1(c_Perg		,"02"		,"Filial De"   		 ,""	  ,""		  ,		"mv_ch2"	,"C"	,TamSX3("E1_FILIAL")[1] ,0			,0			,"G"	    ,""			,"mv_par02"	,		""		,		""	,		""	,		""	,		"",			""			,		""	,		""	,		""	,		"" 	,		""			,		""	,		""	,		""	,		""	,		""		,		""	,		""	,		""	,		""	,		""	,		""	,		""	,		""	, "SM0"	,		""	,		""	,		""	,		""	,  ""	)
+o_perg:mtdPutSX1(c_Perg		,"03"		,"Filial Ate"	     ,""	  ,""		  ,		"mv_ch3"	,"C"	,TamSX3("E1_FILIAL")[1] ,0			,0			,"G"	    ,""			,"mv_par03"	,		""		,		""	,		""	,		""	,		"",			""			,		""	,		""	,		""	,		"" 	,		""			,		""	,		""	,		""	,		""	,		""		,		""	,		""	,		""	,		""	,		""	,		""	,		""	,		""	, "SM0"	,		""	,		""	,		""	,		""	,  ""	)
+o_perg:mtdPutSX1(c_Perg		,"04"		,"Mes De"   		 ,""	  ,""		  ,		"mv_ch4"	,"C"	,2 						,0			,0			,"G"	    ,""			,"mv_par04"	,		""		,		""	,		""	,		""	,		"",			""			,		""	,		""	,		""	,		"" 	,		""			,		""	,		""	,		""	,		""	,		""		,		""	,		""	,		""	,		""	,		""	,		""	,		""	,		""	, ""	,		""	,		""	,		""	,		""	,  ""	)
+o_perg:mtdPutSX1(c_Perg		,"05"		,"Mes Ate"	     	 ,""	  ,""		  ,		"mv_ch5"	,"C"	,2 						,0			,0			,"G"	    ,""			,"mv_par05"	,		""		,		""	,		""	,		""	,		"",			""			,		""	,		""	,		""	,		"" 	,		""			,		""	,		""	,		""	,		""	,		""		,		""	,		""	,		""	,		""	,		""	,		""	,		""	,		""	, ""	,		""	,		""	,		""	,		""	,  ""	)
+
+// SM0 = tabela de filiais 
+
+RestArea(a_Area)
+
+Return

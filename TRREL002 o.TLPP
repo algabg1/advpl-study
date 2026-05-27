@@ -1,0 +1,278 @@
+#INCLUDE 'FWMVCDEF.CH'
+#INCLUDE 'TOTVS.CH'
+
+/*/
+ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
+±±ºPrograma  ³FLOJR006º Autor ³ Beatriz Azevedo (TBA087)º Data ³ JAN/2026 º±±
+±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
+±±ºDescricao ³ Planilha de rastreio dos orçamentos	         		      º±±
+±±ºCliente   ³ Center Moveis                                       	      º±±
+±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
+±±ºUso       ³                                                 º±±
+±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
+±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+/*/
+
+**********************
+User Function TRREL002
+**********************
+Local c_Area		:=GetArea()
+
+DEFAULT l_Auto		:=.F.
+
+PRIVATE c_Perg    	:="TRREL002"
+Private c_Enter 	:=CHR(13)+CHR(10)
+Private c_TSFiltro 	:=""
+
+f_CriaPerg(c_Perg)
+
+If 	Pergunte(c_Perg,.T.)=.T.
+	f_TRREL01A()
+Endif
+
+RestArea(c_Area)
+
+Return
+
+**************************
+Static Function f_TRREL01A
+**************************
+Local a_Fields	:={}
+
+Private c_Alias2:= "TRREL01A"
+Private c_Sit 	:=""
+
+oTempTable := FWTemporaryTable():New( c_Alias2 )
+
+aAdd(a_Fields,{"EX_NATUREZ"	,"C",TAMSX3("ED_CODIGO")[1]	    ,0						})
+aAdd(a_Fields,{"EX_DESCNAT"	,"C",TAMSX3("ED_DESCRIC")[1]	,0						}) 
+aAdd(a_Fields,{"EX_VAL01"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL02"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL03"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL04"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL05"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL06"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL07"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL08"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL09"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL10"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL11"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+aAdd(a_Fields,{"EX_VAL12"	,"N",TAMSX3("E1_VALOR")[1]      ,TAMSX3("E1_VALOR")[2]	})
+
+oTemptable:SetFields( a_Fields )
+oTempTable:AddIndex("01", {"EX_NATUREZ"} )
+
+//------------------
+//Criação da tabela
+//------------------
+oTempTable:Create()
+
+Processa({ || f_ObtDados()},"Aguarde...", "Obtendo Dados ...", .F.)
+Processa({ || f_GeraPlan()},"Aguarde...", "Gerando a planilha ...", .F.)
+
+(c_Alias2)->(dbCloseArea())
+
+Return
+
+****************************
+Static Function f_ObtDados()
+****************************
+Local c_Qry 	:=""
+Local c_Alias   :=GetNextAlias()
+
+//Obter Dados financeiros
+c_Qry:="SELECT NATUREZA, COALESCE(ED_DESCRIC, ' NAO CADASTRADO') DESCNAT, MES, VALOR "+c_Enter
+c_Qry+="FROM "+c_Enter
+
+c_Qry+="    ( "+c_Enter 
+c_Qry+="        SELECT E1_NATUREZ NATUREZA, SUBSTRING(E1_VENCREA,5,2) MES, SUM(E1_VALOR) VALOR "+c_Enter
+c_Qry+="        FROM "+RetSqlName("SE1")+" SE1 "+c_Enter
+c_Qry+="        WHERE SE1.D_E_L_E_T_<>'*' "+c_Enter
+c_Qry+="            AND SUBSTRING(E1_VENCREA,1,4)='"+mv_par01+"' "+c_Enter
+c_Qry+="        GROUP BY E1_NATUREZ, SUBSTRING(E1_VENCREA,5,2) "+c_Enter
+
+c_Qry+="        UNION "+c_Enter
+
+c_Qry+="        SELECT E2_NATUREZ NATUREZA, SUBSTRING(E2_VENCREA,5,2) MES, SUM(E2_VALOR) VALOR "+c_Enter
+c_Qry+="        FROM "+RetSqlName("SE2")+" SE2 "+c_Enter
+c_Qry+="        WHERE SE2.D_E_L_E_T_<>'*' "+c_Enter
+c_Qry+="            AND SUBSTRING(E2_VENCREA,1,4)='"+mv_par01+"' "+c_Enter
+c_Qry+="        GROUP BY E2_NATUREZ, SUBSTRING(E2_VENCREA,5,2) "+c_Enter
+c_Qry+="      ) ASD "+c_Enter
+
+c_Qry+="       LEFT JOIN SED010 SED ON LTRIM(RTRIM(ED_CODIGO))=LTRIM(RTRIM(NATUREZA)) "+c_Enter
+c_Qry+="            AND SED.D_E_L_E_T_<>'*' "+c_Enter
+
+c_Qry+="ORDER BY NATUREZA, MES "+c_Enter
+
+Memowrite(GetTempPath()+"\TRREL002.TXT",c_Qry)		
+
+c_Qry:=ChangeQuery(c_Qry)           
+
+dbUseArea(.T., "TOPCONN", TCGenQry(,,c_Qry), c_Alias, .F., .T.) //transfomra a query numa tabela tmeporaria
+
+dbSelectArea(c_Alias) 
+(c_Alias)->(dbGoTop()) //inicio do arquivo
+Do 	While (c_Alias)->(EOF())=.F. //le até o final do arquivo
+
+	dbSelectArea(c_Alias2)
+    dbSetOrder(1) //chave
+    dbSeek((c_Alias)->NATUREZA,.F.) //usa o nome do campo que usou na query
+    If  !Found() //se não achou
+        RecLock(c_Alias2,.T.)  //bloqueia o registro | .T. vai incluir um registro novo
+            EX_NATUREZ	:=(c_Alias)->NATUREZA
+            EX_DESCNAT	:=(c_Alias)->DESCNAT
+        MsUnlock() //desbloqueia
+    Endif
+    c_Var:="EX_VAL"+(c_Alias)->MES
+    RecLock(c_Alias2,.F.) //.F. regsitro ja existe
+        &c_Var+=(c_Alias)->VALOR //& considera o conteudo da variavel
+    MsUnLock()
+
+	(c_Alias)->(dbSkip()) //le o proximo registro
+
+Enddo
+
+(c_Alias)->(dbCloseArea()) //fecha a tabela
+
+Return
+
+****************************
+Static Function f_GeraPlan()
+****************************
+Local o_Explorer:=clsExplorer():New() //clsExplorer função da fábrica
+Local c_Hora    :=Substr(Time(),1,2)+Substr(Time(),4,2)
+Local c_Arquivo	:="TRREL002_"+DtoS(Date())+"_"+c_Hora+".xls"
+Local c_Caminho	:=""
+Local c_TitPlan :='Planilha dos Valores Previstos no ano de ' + mv_par01
+Local l_Ret 	:=.T.
+
+Private c_Destino	:=""
+Private o_Excel		:=FWMsExcelEx():New() //cria arquivo xml
+Private c_Alias		:=GetNextAlias()
+
+c_Caminho:=Alltrim(mv_par02)
+If 	Right(c_Caminho,1)<>"\"
+	c_Caminho+="\"
+Endif
+
+If  !o_Explorer:mtdExistePasta(c_Caminho) //fabrica
+    If  !o_Explorer:mtdCriaPasta(c_Caminho)
+        Alert("Falha ao tentar a criar pasta " +  c_Caminho + ". Procure o setor de TI!")
+        l_Ret:=.F.
+    Endif
+EndIf
+
+If  l_Ret=.T.
+	c_Destino:=c_Caminho+c_Arquivo
+
+	FwMsgRun(,{|oSay| l_Ret := f_CriaExcel(c_TitPlan)},"Criando estrutura do relatorio","Aguarde....Montando colunas..." ) //para aparecer a mensagem na tela
+
+    //Ativando o arquivo e gerando o xml
+    o_Excel:Activate()
+    o_Excel:GetXMLFile( c_Destino )
+               
+    //Tentando abrir o objeto
+    n_Ret := ShellExecute("open", c_Destino, "", "", 3)
+			     
+    //Se houver algum erro
+	If  n_Ret <= 32
+		MsgStop("Não foi possível abrir o arquivo " +c_Destino+ "!", "Atencao")
+        l_Ret:=.F.
+	EndIf 
+
+EndIf
+
+Return 
+
+**************************************
+Static Function f_CriaExcel(c_TitPlan)
+**************************************
+Local l_Ret		:=.T.
+
+//Adicionando as Colunas
+o_Excel:SetCelFont('Courier New')
+o_Excel:SetCelItalic(.F.)
+o_Excel:SetCelUnderLine(.T.)
+o_Excel:SetCelSizeFont(10)
+o_Excel:SetCelFrColor("#FFFFFF")
+o_Excel:SetCelBgColor("#000333")
+o_Excel:SetTitleBold(.T.)
+o_Excel:SetHeaderBold(.T.)
+
+o_Excel:AddworkSheet("Parametro")
+o_Excel:AddTable("Parametro","Parametros")
+
+o_Excel:AddColumn("Parametro","Parametros",'PARAMETRO',1)
+o_Excel:AddColumn("Parametro","Parametros",'CONTEUDO',1)
+
+o_Excel:AddRow( "Parametro", "Parametros", { 'Ano'		        , mv_par01 	} )
+o_Excel:AddRow( "Parametro", "Parametros", { 'Caminho Planilha'	, mv_par02 	} )
+
+o_Excel:AddworkSheet("Planilha")
+o_Excel:AddTable("Planilha",c_TitPlan)
+
+o_Excel:AddColumn("Planilha",c_TitPlan,"NATUREZA"				,1)	//EX_NATUREZ	
+o_Excel:AddColumn("Planilha",c_TitPlan,"DESCRIÇÃO"				,1)	//EX_DESCNAT		
+o_Excel:AddColumn("Planilha",c_TitPlan,"JANEIRO"				,1)	//EX_VAL01	
+o_Excel:AddColumn("Planilha",c_TitPlan,"FEVEREIRO"				,1)	//EX_VAL02	
+o_Excel:AddColumn("Planilha",c_TitPlan,"MARÇO"					,1)	//EX_VAL03		
+o_Excel:AddColumn("Planilha",c_TitPlan,"ABRIL"					,1)	//EX_VAL04
+o_Excel:AddColumn("Planilha",c_TitPlan,"MAIO"					,1)	//EX_VAL05	
+o_Excel:AddColumn("Planilha",c_TitPlan,"JUNHO"					,1)	//EX_VAL06	
+o_Excel:AddColumn("Planilha",c_TitPlan,"JULHO"					,1)	//EX_VAL07	
+o_Excel:AddColumn("Planilha",c_TitPlan,"AGOSTO"					,1)	//EX_VAL08		
+o_Excel:AddColumn("Planilha",c_TitPlan,"SETEMBRO"				,1)	//EX_VAL09	
+o_Excel:AddColumn("Planilha",c_TitPlan,"OUTUBRO"				,1)	//EX_VAL10	
+o_Excel:AddColumn("Planilha",c_TitPlan,"NOVEMBRO"				,3)	//EX_VAL11	
+o_Excel:AddColumn("Planilha",c_TitPlan,"DEZEMBRO"				,1)	//EX_VAL12	
+
+
+dbSelectArea(c_Alias2)
+dbSetOrder(1)
+dbGoTop()
+Do 	While (c_Alias2)->(Eof())=.F.
+
+	o_Excel:AddRow("Planilha",c_TitPlan,	;
+		{									;
+			(c_Alias2)->EX_NATUREZ		,	;
+			(c_Alias2)->EX_DESCNAT		,	;
+			(c_Alias2)->EX_VAL01		,	;
+			(c_Alias2)->EX_VAL02		,	;
+			(c_Alias2)->EX_VAL03		,	;
+			(c_Alias2)->EX_VAL04		,	;
+			(c_Alias2)->EX_VAL05  	    ,	;
+			(c_Alias2)->EX_VAL06		,	;
+			(c_Alias2)->EX_VAL07		,	;
+			(c_Alias2)->EX_VAL08		,	;
+			(c_Alias2)->EX_VAL09		,	;
+			(c_Alias2)->EX_VAL10		,	;
+			(c_Alias2)->EX_VAL11		,	;
+			(c_Alias2)->EX_VAL12			;
+		})
+
+	(c_Alias2)->(dbSkip())
+
+Enddo
+
+Return(l_Ret)
+
+**********************************
+Static Function f_CriaPerg(c_Perg)
+**********************************
+Local a_Area 	:= GetArea()
+
+Private o_perg   :=	clsComponentes():new()
+
+c_Perg := PADR(c_Perg,10)
+
+//				 X1_GRUPO	, X1_ORDEM	, X1_PERGUNT		, X1_PERSPA	, X1_PERENG	, X1_VARIAVL, X1_TIPO	, X1_TAMANHO			, X1_DECIMAL, X1_PRESEL	, X1_GSC	, X1_VALID	, X1_VAR01	, 	X1_DEF01	, X1_DEFSPA1, X1_DEFENG1, X1_CNT01	, X1_VAR02, 	X1_DEF02		, X1_DEFSPA2, X1_DEFENG2, X1_CNT02	, X1_VAR03	, 	X1_DEF03		, X1_DEFSPA3, X1_DEFENG3, X1_CNT03	, X1_VAR04	, X1_DEF04		, X1_DEFSPA4, X1_DEFENG4, X1_CNT04	, X1_VAR05	, X1_DEF05	, X1_DEFSPA5, X1_DEFENG5, X1_CNT05	, X1_F3	, X1_PYME	, X1_GRPSXG	, X1_HELP	, X1_PICTURE, X1_IDFIL
+o_perg:mtdPutSX1(c_Perg		,"01"		,"Ano			    ",		"",			"",		"mv_ch1",	"C",	4	                    ,0			,0			,"G"		,		""	,"mv_par01"	,		""		 ,		""	,		""	,		""	,		"",			""			,		""	,		""	,		""	,		""	,		""			,		""	,		""	,		""	,		""	,		""		,		""	,		""	,		""	,		""	,		""	,		""	,		""	,		""	, ""	,		""	,		""	,		""	,		""	,  ""	)
+o_perg:mtdPutSX1(c_Perg		,"02"		,"Caminho Planilha	",		"",			"",		"mv_ch2",	"C",	60						,0			,0			,"G"		,		""	,"mv_par02"	,		""		 ,		""	,		""	,		""	,		"",			""			,		""	,		""	,		""	,		"" 	,		""			,		""	,		""	,		""	,		""	,		""		,		""	,		""	,		""	,		""	,		""	,		""	,		""	,		""	, ""	,		""	,		""	,		""	,		""	,  ""	)
+
+RestArea(a_Area)
+
+Return

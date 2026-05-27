@@ -1,0 +1,24 @@
+#include "TOTVS.ch"
+
+User Function ROT001()
+
+Local c_alias     := "Z07" as character
+Local a_Cores     :={;
+                    {'Z07->Z07_VALOR >= 100' , 'ENABLE'},;
+                    {'Z07->Z07_VALOR < 100'  , 'DISABLE'};
+                    }
+
+Private aRotina   := {} as array
+
+dbSelectArea("Z07")
+
+cCadastro   := "Manutençao Regioes de Frete - Ana"
+AADD(aRotina, { "Pesquisar",    "AxPesqui", 0, 1 })
+AADD(aRotina, { "Visualizar",   "AxVisual", 0, 2 })
+AADD(aRotina, { "Incluir",      "AxInclui", 0, 3 })
+AADD(aRotina, { "Alterar",      "AxAltera", 0, 4 })
+AADD(aRotina, { "Excluir",      "AxDeleta", 0, 5 })
+
+MBrowse(6, 1, 22, 75, c_alias,,,,,,a_Cores)
+
+Return

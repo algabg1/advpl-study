@@ -1,0 +1,190 @@
+#INCLUDE "PROTHEUS.CH"
+#INCLUDE 'TOPCONN.CH'
+
+static c_Rotina := "Atualizacao Cliente X Vendedor"
+#DEFINE ENTER CHR(13)+CHR(10)
+
+/*/{Protheus.doc} 
+Rotina atualizar vendedores e gar no cadstro de clientes a partir de um arquivo tipo TXT/CSV
+@type function
+@version 12.1.2410
+@since 26/03/2026
+@return nil
+/*/
+
+************************
+User Function ROT005()
+************************
+Local l_Ret     := .F.
+Local c_Arquivo := Space(200)
+
+l_Ret:= U_ROT005A(@c_Arquivo)
+
+If 	l_Ret
+    FwMsgRun(, {|| f_ObtDados(c_Arquivo)}, "Aguarde", "Atualizando Cliente X Vendedor...")
+Endif
+
+Return()
+
+*********************************
+User Function ROT005A(c_Arquivo)
+*********************************
+Local l_Ret		:= .F.
+Local c_Rotina	:= "Atualizacao Cliente X Vendedor"
+
+oFont1     := TFont():New( "Verdana",0,-11,,.F.,0,,400,.F.,.F.,,,,,, )  
+oDlg1      := MSDialog():New( 092,232,340,714,c_Rotina,,,.F.,,,,,,.T.,,oFont1,.T. )
+
+oGrp1      := TGroup():New( 004,004,052,244,"",oDlg1,CLR_BLACK,CLR_WHITE,.T.,.F. )
+oSay1      := TSay():New( 012,008,{||"Esta rotina tem a finalidade de atualizar os vendedores no cadastro"},oGrp1,,oFont1,.F.,.F.,.F.,.T.,CLR_BLACK,CLR_WHITE,232,008)
+oSay1      := TSay():New( 024,008,{||"dos clientes"},oGrp1,,oFont1,.F.,.F.,.F.,.T.,CLR_BLACK,CLR_WHITE,232,008)
+oSay2      := TSay():New( 036,149,{||"Desenvolvimento Totvs Leste"},oGrp1,,oFont1,.F.,.F.,.F.,.T.,CLR_BLACK,CLR_WHITE,088,008)
+
+oGrp2      := TGroup():New( 056,004,108,244,"",oDlg1,CLR_BLACK,CLR_WHITE,.T.,.F. )
+oSay3      := TSay():New( 069,008,{||"Localize o arquivo de importacao:"},oGrp2,,oFont1,.F.,.F.,.F.,.T.,CLR_BLACK,CLR_WHITE,096,008)
+oGet1      := TGet():New( 069,104,{|u| iif(pcount()>0, c_Arquivo:=u, c_Arquivo )},oGrp2,136,008,'',,CLR_BLACK,CLR_WHITE,oFont1,,,.T.,"",,,.F.,.F.,,.F.,.F.,"","",,)
+oBtn1      := TButton():New( 081,203,"...",oGrp2,{|| f_BuscaArq(@c_Arquivo) },037,012,,oFont1,,.T.,,"",,,,.F. )
+
+oSBtn1     := SButton():New( 112,216,1,{|| l_Ret:=.T., oDlg1:End() },oDlg1,,"", )
+oSBtn2     := SButton():New( 112,188,2,{|| l_Ret:=.F., oDlg1:End() },oDlg1,,"", )
+
+oDlg1:Activate(,,,.T.)
+
+Return(l_Ret)
+
+*************************************
+Static Function f_BuscaArq(c_Arquivo)
+*************************************
+Local c_Titulo1 :="Selecione o arquivo"
+Local c_Extens  :="CSV | *.csv|TXT|*.txt"
+Local c_Caminho :=SuperGetMv( "FS_PIMPPV", .F., GetTempPath()) 
+
+c_Caminho:=Alltrim(c_Caminho)
+IIf((Right(c_Caminho),1) <> "\", c_Caminho += "\", c_Caminho)
+
+c_Arquivo	:= cGetFile(c_Extens,c_Titulo1,,c_Caminho,.T.)
+
+Return()
+
+*************************************
+Static Function f_ObtDados(c_Arquivo)
+*************************************
+Local l_Ret		    :=.T.
+Local c_Cliente     :=""
+Local c_Loja        :=""
+Local c_Vendedor    :=""
+Local c_GAR         :=""
+Local c_NomGAR      :=""
+Local n_QtdAtu		:=0
+Local n_QtdErr 	    :=0
+Local n_QtdLidos    :=0 
+Local n_Linha       :=0
+Local c_LinAtu      :=""
+Local a_Linha       :={}
+Local a_Log		    :={}
+Local oFile         :=FwFileReader():New(c_Arquivo)
+Local o_TxtArray    :=clsTxt2Array():New()
+
+If  oFile:Open()
+
+    n_Linha:=0
+
+    Do  While (oFile:HasLine())
+        n_Linha++
+        n_QtdLidos++
+        l_Ret:=.T.
+
+        c_LinAtu := oFile:GetLine()
+        a_Linha	 := o_TxtArray:mtdGerArray(c_LinAtu,";")
+
+        c_Cliente   :=PADR(UPPER(Alltrim(a_Linha[1])),TamSx3("A1_COD")[1])
+        c_Loja      :=PADR(UPPER(Alltrim(a_Linha[2])),TamSx3("A1_LOJA")[1]) 
+        c_Vendedor  :=PADR(UPPER(Alltrim(a_Linha[3])),TamSx3("A1_VEND")[1])
+        c_GAR       :=PADR(UPPER(Alltrim(a_Linha[4])),TamSx3("A1_XGAR")[1])
+        c_NomGAR    :=PADR(UPPER(Alltrim(a_Linha[5])),TamSx3("A1_NOMGAR")[1])
+        
+        // VENDEDOR
+        If Empty(c_Vendedor)
+            f_AddErro(a_Log, n_Linha, "Erro - Vendedor nao pode ser branco", @l_Ret, @n_QtdErr)
+        ElseIf !f_ValidaCadastro("SA3", 1, xFilial("SA3")+c_Vendedor)
+            f_AddErro(a_Log, n_Linha, "Erro - Vendedor nao cadastrado: "+c_Vendedor, @l_Ret, @n_QtdErr)
+        EndIf
+
+        // CLIENTE / LOJA
+        If Empty(c_Cliente) .or. Empty(c_Loja)
+            f_AddErro(a_Log, n_Linha, "Erro - Cliente/Loja nao pode ser branco", @l_Ret, @n_QtdErr)
+        ElseIf !f_ValidaCadastro("SA1", 1, xFilial("SA1")+c_Cliente+c_Loja)
+            f_AddErro(a_Log, n_Linha, "Erro - Cliente/Loja nao cadastrado: "+c_Cliente+"/"+c_Loja, @l_Ret, @n_QtdErr)
+        EndIf
+
+        // GAR
+        If Empty(c_GAR)
+            f_AddErro(a_Log, n_Linha, "Erro - GAR nao pode ser branco", @l_Ret, @n_QtdErr)
+        ElseIf !f_ValidaCadastro("SA3", 1, xFilial("SA3")+c_GAR)
+            f_AddErro(a_Log, n_Linha, "Erro - GAR nao cadastrado: "+c_GAR, @l_Ret, @n_QtdErr)
+        EndIf
+
+        If  l_Ret
+            RecLock("SA1",.F.)
+                SA1->A1_VEND    :=c_Vendedor
+                SA1->A1_XGAR    :=c_GAR
+                SA1->A1_NOMGAR  :=c_NomGAR
+            MsUnLock()
+            n_QtdAtu++
+        Endif
+
+    EndDo
+    oFile:Close()
+Else 
+    MsgAlert("Problemas na abertura do arquivo"+CHR(13)+CHR(10)+c_Arquivo,"Erro na Importacao")
+Endif
+
+MsgInfo("Importacao concluida!","Clientes X Vendedores")
+aadd(a_Log, { " ", " "})
+aadd(a_Log, { " ", "Resultado importacao"})
+aadd(a_Log, { " ", "Registros lidos = " + Alltrim(Str(n_QtdLidos))})
+aadd(a_Log, { " ", "Erros encontrados = " + Alltrim(Str(n_QtdErr))})
+aadd(a_Log, { " ", "Clientes Atualizados = " + Alltrim(Str(n_QtdAtu))})
+
+If	Len(a_Log) > 0
+	f_IMPERR(a_Log)
+Endif
+
+Return
+***********************************************************
+Static Function f_ValidaCadastro(c_Alias, n_Ordem, c_Chave)
+***********************************************************
+
+dbSelectArea(c_Alias)
+dbSetOrder(n_Ordem)
+dbSeek(c_Chave, .F.)
+
+Return (c_Alias)->(Found())
+
+*******************************************************************
+Static Function f_AddErro(a_Log, n_Linha, c_Msg, @l_Ret, @n_QtdErr)
+*******************************************************************
+
+AAdd(a_Log, {StrZero(n_Linha,4), c_Msg})
+l_Ret   := .F.
+n_QtdErr++
+
+Return
+
+*******************************
+Static Function f_IMPERR(a_Vet)
+*******************************
+
+Local n_I 	    :=0
+Local c_arqerr 	:=GetTempPath() + "LogImp_"+Dtos(Date())+"_"+Substr(TIME(),1,2)+Substr(TIME(),4,2)+".txt"
+Local c_TextoAux:=""
+
+For n_I := 1 To Len(a_Vet)
+    c_TextoAux+="Linha: "+a_Vet[n_I,1]+" - "+a_Vet[n_I,2]+CHR(13)+CHR(10)
+Next
+    
+MemoWrite(c_arqerr, c_TextoAux)
+ShowMemo(c_arqerr)
+
+Return 
+ 
