@@ -1,0 +1,2863 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Microsiga Protheus</Author>
+  <LastAuthor>Beatriz Azevedo</LastAuthor>
+  <Created>2011-11-11T00:00:00Z</Created>
+  <LastSaved>2026-04-28T03:01:14Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8760</WindowHeight>
+  <WindowWidth>19296</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ActiveSheet>1</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s16" ss:Name="Vírgula">
+   <NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="3"
+     ss:Color="#FFFFFF"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#333399"
+    ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#4F81BD" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#DCE6F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s70" ss:Parent="s16">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#4F81BD" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s71" ss:Parent="s16">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s72" ss:Parent="s16">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s73" ss:Parent="s16">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#DCE6F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s74" ss:Parent="s16">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#DCE6F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s75" ss:Parent="s16">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Parametro">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="4" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="54"/>
+   <Column ss:Width="54.599999999999994"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="s63"><Data ss:Type="String">Parametros</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">PARAMETRO</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">CONTEUDO</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Ano</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Caminho Planilha</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">C:\TEMP\</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <TopRowVisible>1</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R1C2</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Planilha">
+  <Table ss:ExpandedColumnCount="14" ss:ExpandedRowCount="167" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="51"/>
+   <Column ss:Width="166.2"/>
+   <Column ss:StyleID="s75" ss:Width="67.2" ss:Span="11"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="13" ss:StyleID="s63"><Data ss:Type="String">Planilha dos Valores Previstos no ano de 2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">NATUREZA</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">DESCRIÇÃO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">JANEIRO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">FEVEREIRO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">MARÇO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">ABRIL</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">MAIO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">JUNHO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">JULHO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">AGOSTO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">SETEMBRO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">OUTUBRO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">NOVEMBRO</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">DEZEMBRO</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">NAO CADASTRADO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1110.28</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1110.28</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3280.72</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3280.72</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">351</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0101001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">FATURAMENTO COM INSS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5606425.6100000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7548019.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5421965.7300000004</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6239196.5700000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6150065.7699999996</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6189218.7699999996</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5817222.2599999998</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6153400.3600000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5873192.2199999997</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6097138.46</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">6402461.4900000002</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6154559.2300000004</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0101002</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">FATURAMENTO COM INSS - SIMPLES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">54065.33</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">70921.19</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">53860.68</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">51458.48</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">52539.01</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">72411.83</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">55423.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">71941.75</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">133739.26999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">76708.73</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">81391.929999999993</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">83875.13</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0101003</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">FATURAMENTO CONDOMINIO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">251.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0101004</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">FATURAMENTO ENTIDADES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">22772.5</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">703.85</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9321.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">28097.46</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">18263.04</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9321.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9321.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">8941.2800000000007</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">8941.2800000000007</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9321.76</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">9321.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9321.76</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0101005</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">FATURAMENTO SIMPLES RET IR</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8519.5400000000009</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2473.94</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4531.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1466.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1466.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1466.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1466.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1844.21</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1466.34</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1544.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1544.34</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0102001</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">CSRF (TERCEIROS)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4639.53</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">SALARIOS E REMUNERACOES</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">851242.35</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">856110.79</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1163299.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1350299.69</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1016217.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">935059.24</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">991005.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">940660.76</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">971690.66</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">931461.16</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">5675353.3700000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1038842.25</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201003</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PRO-LABORE</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">33040.92</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">34022.57</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">35092.559999999998</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">35092.559999999998</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">50592.1</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">35167.79</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">33799.61</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">35070.33</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">35094.15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">35103.53</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">64603.97</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">34161.67</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201005</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PENSAO ALIMENTICIA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7013.14</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5824.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13323.04</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5191.7299999999996</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5921.53</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6405.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10767.67</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6236.4</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6969.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23148.22</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">35823.230000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">15532.85</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201006</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">RESCISOES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">61186.85</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">11573.44</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">39317.519999999997</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">46626.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">78667.41</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">45384.42</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">20151.349999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">143514.69</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">22433.439999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">92961.24</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">14020.3</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">16980.29</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201007</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">INSS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">89079.57</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">125137.69</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">118306.16</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">116068.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">115768.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">115629.1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5563581.29</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">119772.73</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">115838.62</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">119861.49</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">122276.83</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">191745.77</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201008</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">FGTS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">68238</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">47946.31</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">40668.15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">47768.07</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">53807.37</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1583830.92</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">45410.48</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">657772.68000000005</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">43352.53</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">48030.28</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">41407.14</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">53072.81</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201009</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">IRRF S/ FOLHA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">120167.94</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">61518.37</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6804.35</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">97379.68</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">71144.37</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">175857.38</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3009364.41</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">73307.539999999994</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">75778.14</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">69667.03</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">74900.23</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10648.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201010</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PLANO DE SAUDE</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">287193.99</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">276040.34000000003</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2369082.09</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">262845.03000000003</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">276213.23</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">351489.49</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">260030.39</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">300598.03000000003</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">272626.83</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">269732.27</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">251636</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">286094.96000000002</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201011</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">SEGURO DE VIDA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4474.3599999999997</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4516.78</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4439.6400000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4762.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4815.95</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4842.5600000000004</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">56794.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10706.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5159.6400000000003</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10703.27</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201012</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">VALE TRANSPORTE</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5666.44</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4376.79</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6892.39</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4557.7299999999996</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6267.4</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5987.93</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3387.32</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4482.25</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5607.08</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3360.8</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">5359.29</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4847</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201013</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PROG DE ALIMEN DO TRABALHADOR</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">161053.45000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">160131.39000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">261568.76</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">171384.73</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">161610.67000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">166927.84</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">179248.04</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">178478.56</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">183696.02</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">152918.76999999999</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">139771.26</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">174714.19</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201014</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MEDICINA OCUPACIONAL</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">353.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">367.68</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">473.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">938.24</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">980.36</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9877.68</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1897.7</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">697</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1013.7</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">505</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">454.26</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">438.12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201015</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">SUBSIDIO ACADEMICO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2381.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2272.6999999999998</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1645.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1842.62</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2092.62</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1442.62</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1417.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2044.54</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1744.54</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1684.57</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1404.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1148.19</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201016</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SUBSIDIO NOTEBOOK</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4176.24</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3217.2</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3878.71</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3801.56</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3675.58</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3175.58</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3907.08</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3694.89</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3442.42</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4297.8999999999996</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">4108.7299999999996</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5069.17</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201017</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">VALE PREMIACAO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11650</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12460.64</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14450</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11650</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12350</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">16450</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23450</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11350</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">13400</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6750</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201018</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">VALE COMBUSTIVEL</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">12631.44</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13488.7</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13060.07</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201019</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">EPI E UNIFORMES</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">167.6</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">193.85</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">209.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2511.1999999999998</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1440</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">607.6</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">7850.91</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">113.69</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201020</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ADIANTAMENTO DE SALARIO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">149516.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">249212.39</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">170380.24</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">167019.10999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">261192.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">158876.10999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3143394.25</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">232259.37</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">167190.03</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">164989.57</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">224505.92</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">128540.55</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201021</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ADIANTAMENTO 13 SALARIO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">627077.06999999995</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201022</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ADIANTAMENTO DE FERIAS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">87192.31</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">21394.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">67532.06</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">109125.75</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">93471.29</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">119661.55</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">168929.09</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">89108.34</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">87488.91</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">95206.61</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">98797.32</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">675213.37</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201023</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">EMPRESTIMO CONSIGNADO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">18031.59</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">17786.71</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">17412.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">15478.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">21939.85</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">16399.330000000002</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11674.75</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11674.75</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9836.6299999999992</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13325.42</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">10529.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">196405.11</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201024</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MEDICINA OCUPACIONAL RET</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1273.6199999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">270.83</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">331.02</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">240.75</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">70</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201025</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">CONTRIBUICAO SINDICAL</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3544.28</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1319.95</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4446.76</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2014.54</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201027</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">BENEFICIO GESTOR</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">38152.39</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">41502.47</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">39827.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">52662.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">54908.32</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">53837.15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">53602.51</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">59163.14</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">65280.75</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">59293.58</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">63323.16</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">60953.4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201028</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PLANO SAUDE C/RET (IR+PIS+COF)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8626.7800000000007</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6928.56</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3260.53</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4305.6899999999996</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">17204.419999999998</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6012.95</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5184.01</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5130.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4865.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">35700.120000000003</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">5437.94</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6421.77</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201030</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">EPI E UNIFORMES (DESP.ANTEC)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">650</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201032</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PREMIACAO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">342264.01</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1652.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">16900.39</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">757.45</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1788.21</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201033</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">CARTÃO BENEFICIO (2ª VIA)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201034</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PLANO SAUDE C/RET (IR+PCC)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">913.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">913.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">913.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">913.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">913.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">913.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201035</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">BENEFICIO - ATIVIDADE FISICA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1145</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1200</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1165</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">1120</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1115</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0201036</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">13 SALARIO (2 PARCELA)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">435406.19</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0201037</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">VALE CULTURA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">1440</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">720</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PARCEIRO DE SERVICO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129278.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">287239.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">266831.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">193001.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">163026.70000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">206106.08</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">184402.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">215164.91</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">190872.53</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">182009.89</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">214194.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">186422.49</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202002</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PRESTACAO DE SERVICO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">69742.62</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">160108.26</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">100260.5</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">89436.96</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">108663.84</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">499169.85</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">111500.66</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">456432.45</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">121580.55</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">111271.89</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">109997.24</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">121460.57</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202003</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">CONTRATUAL</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">41040.660000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">43692.1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">29904.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">30819.81</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">46671.6</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">18574.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">30618.26</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">26132.65</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23877.89</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">30621.17</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">27602.19</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202004</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">CONSULTORIA PROPRIA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6500</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15907.35</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">39570.160000000003</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202009</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PREMIACOES</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">34230.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202012</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PRESTACAO DE SERVICO CNT</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">150000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">122000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">189107.75</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">201200</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">350000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">500000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202013</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">OUTROS CUSTOS - SERV.T PJ</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">324.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">324.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">324.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">324.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9952.7900000000009</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12522.79</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9952.7900000000009</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9952.7900000000009</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7552.79</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">31952.79</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">22352.79</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">20802.79</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202015</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PREMIACAO ACELERAR</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">21000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202050</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4843.1400000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4843.1400000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4843.1400000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5119.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5119.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">20473.72</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5119.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5119.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5119.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5119.96</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">5119.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5119.96</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202051</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SERVICOS CONTABEIS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202054</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">OUTROS SERVICOS DE TERCEIRO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9511.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8579.23</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8879.1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8581.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8668.3799999999992</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">35058.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2058.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2058.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">174.85</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2750</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202055</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PRESTACAO SERV LIMPEZA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4104.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4104.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4104.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4104.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6191.22</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4521.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4521.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4521.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4521.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4521.78</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">4521.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4521.78</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202056</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PARCEIRO DE SERVICO S/ RET</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">394326.77</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">283053.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2655329.23</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">213437.35</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">223848.11</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">270040.83</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">204879.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">250381.72</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">289007.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">297419.43</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">299121.06</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">341921.27</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202057</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">HONORARIOS ADVOCATICIOS S/RET</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">8497</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">8497</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">8497</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10774</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10774</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7582</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6072</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6072</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6072</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6072</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">6072</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6072</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202058</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">SERVICOS CONTABEIS S/RET</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">862.44</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">862.44</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0202059</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PRESTACAO SERV LIMPEZA S/ ISS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5673.64</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6130.37</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6130.37</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6241.01</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6241.01</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7631.77</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7745.11</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6152.62</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10776.96</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">32619.33</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">9258.11</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10058.709999999999</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0202062</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">OUTROS SERV TERCEIROS S/RET</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">100.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">109</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">193.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13332.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13550.18</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10356.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10313</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6887.85</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">7228.85</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7716.85</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0203001</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PASSAGENS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7008.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1132.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">55133.98</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1382.63</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">14605.13</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">20643.740000000002</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">18462.57</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3088.33</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">22483.77</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">53003.49</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">455.2</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">14931.36</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0203002</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">HOSPEDAGEM</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11712.58</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7887.06</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">27650.99</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14430.48</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">33520.89</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14195.67</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">20310.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11267.06</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14797.94</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">19680.759999999998</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">23208.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">25666.080000000002</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0203003</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ALIMENTACAO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">435</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">330.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">954.91</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">620.73</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0203004</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">DESPESAS DE ATENDIMENTO (RDA)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3991.64</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6006.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3734.67</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2071.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3677.99</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4537.05</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2737.48</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2452.91</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2558.16</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3235.01</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2706.75</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2599.86</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0203005</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">LOCOMOCAO (TAXI /UBER/ ONIBUS)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3380.45</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4168.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10209.52</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10623.35</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2532.23</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2515.81</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6806.68</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">12473.59</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">12093.67</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3446.92</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">22508.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5109.9399999999996</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0203006</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">DESPESAS COM PEDAGIO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">581.11</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">694.64</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">798.35</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">749.43</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1090.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1113.23</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">886.27</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1934.27</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">885.34</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">64.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2083.4299999999998</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0203007</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">OUTRAS DESPESAS DE VIAGEM</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">22610.560000000001</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">26969.9</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">20201.34</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">19858.560000000001</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">24536.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15952.62</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">16378.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">24245.1</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13506.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">25099.99</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">21331.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">11499.67</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0203008</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">CONTAS A PAGAR / DESP VIAGEM</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">288.22000000000003</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0203009</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">DESPESA DE REEMBOLSO KM</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">75.63</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6044</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0204001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">CUSTO MAT DE TREINAMENTO NO CL</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">72</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">67</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0204002</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">LANCHE PARA TREINAMENTO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1372.04</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1116.3</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1051.78</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">203.32</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0205001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">INSCRICAO (CURSOS E TREIN)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">140.16999999999999</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">24140.17</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">140.16999999999999</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">428.39</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">49.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">450.24</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">196.22</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">49.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">342.54</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">196.22</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">49.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">368.08</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0205002</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PASSAGENS (CURSOS E TREIN)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5757.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">685.46</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5543.7</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5430.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">21289.15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0205003</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">HOSPEDAGEM (CURSOS E TREIN)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23469.86</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10017</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0205004</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ALIMENTACAO (CURSOS E TREIN)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2734.6</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">17796.25</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">21686.3</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">60.97</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0205005</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">LOCOM(TAXI,UBER,ONIBUS)-CURSOS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">43.92</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">645</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0205006</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">DESPESAS COM EVENTOS INTERNOS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">17418.11</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5504.94</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">30965.22</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">12493.74</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13669.52</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">65663.88</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10388.620000000001</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">16152.15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">18809.580000000002</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13413.86</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">117742.03</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">140573.48000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0205007</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">INSCRICAO (CUR E TREIN) C/ RET</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11543.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11543.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11543.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0205009</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">OUTRAS DESP TREINAMENTO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1480</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1350.97</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">806.27</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0206001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ALUGUEL DE IMOVEIS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">74835.360000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">128433.3</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">85032.29</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">67516.61</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">67516.61</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">75827.520000000004</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">69147.520000000004</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">68347.520000000004</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">68790.73</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">131770.73000000001</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">549842.65</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">75130.73</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0206002</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ALUGUEL DE EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">167.64</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">467.64</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">299.39</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">179.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179.38</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0206003</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MANUTENCAO E REPAROS DE EQUIPA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3884.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7588</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5419</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6261.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5195.1000000000004</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13717.91</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6095.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5391</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5521.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4262</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">4645</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9982.5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0206004</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MANUTENCAO DE MOVEIS E UTENSIL</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">410</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">14687.66</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">730</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">510</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">300</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0206005</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MANUTENCAO E REPAROS DE IMOVEI</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3500</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5344.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">247</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">400</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10957.46</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5206.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3312.46</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7064.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5972.78</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2187.8000000000002</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2208</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0206006</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">TAXAS E CONDOMINIOS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">20024.91</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">25297.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">28507.85</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">20977.66</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">20969.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">21151.02</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">23045.01</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">22783.08</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">22946.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">42572.73</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">42199.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">23337.35</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0206007</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ENERGIA ELETRICA E AGUA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11673.01</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14063.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">15481.49</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">15540.59</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14515.56</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13019.41</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11330.46</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12913.67</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14625.47</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">15331.1</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">27252.79</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">17294.560000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0206008</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SEGURO DE IMOVEIS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">369.6</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">453.33</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">300.20999999999998</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">162.18</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">333.19</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">924.12</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">786.66</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0206010</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MANUTENCAO E REP EQUIP C/ RET</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">377.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">377.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">377.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">395.57</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">395.57</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">395.57</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">395.57</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">395.57</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">395.57</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0206011</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ALUGUEL VAGA GARAGEM</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3518</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3676</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3676</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3834</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4039</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4755</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4466</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4466</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4424</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4266</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">4266</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4266</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0206012</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ALUGUEL DE IMOVEIS - PF</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">19443.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">19443.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">26923.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">36723.800000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">33044.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">33339.68</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">37268.699999999997</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">37259.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">37259.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">67879.19</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">40379.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">83519.649999999994</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0206013</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">DESPESAS CONTRATUAIS - IMÓVEIS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0207001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MANUTENCAO DE VEICULOS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3080.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1703.15</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1573.81</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4099.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5959.55</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5528.16</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3444.14</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6006.95</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3546.99</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4662.63</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">5979.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5100.3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0207002</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SEGUROS DE VEICULOS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4119.2299999999996</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4119.2299999999996</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4119.2299999999996</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9069.68</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4826.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3385.79</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5384.8</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2609.17</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2609.17</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">27361.49</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">3850.58</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4253</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0207003</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">LICENCIAMENTO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6807.48</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8219.48</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10355.530000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0207004</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">COMBUSTIVEL</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10811.15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">11327.67</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">14112.14</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">12129.52</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">14138.87</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">14294.97</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">12089.71</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">12982.25</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">11858.01</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">14468.89</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">10541.19</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13227.03</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0207006</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">DESPESA COM PEDAGIOS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">54.82</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">387.24</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200.08</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">254.68</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">203.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">164.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">212.38</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">133.97999999999999</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">135.58000000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">196.08</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">86.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0207007</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MANUTENCAO DE VEICULOS C/ RET</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">487.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1937.62</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">637.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">938.1</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">783.77</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">1282.04</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">798.62</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0207008</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ESTACIONAMENTO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">744</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">750</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">750</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1050</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">750</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1150</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1940</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9820</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2070</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1300</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5620</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0207010</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SERVICO DESPACHANTE</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1006</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ENTIDADES DE CLASSES</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1493</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">902</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">916.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">567.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">916.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">916.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1247.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">898.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">898.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">898.5</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">898.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13608.79</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209002</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">CONTRIBUICOES E DOACOES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">16000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">16000</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">15000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4500</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209003</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">IMPOSTOS E TAXAS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">715.73</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">745.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">905.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3708.78</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">78.64</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">367.79</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">701.69</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">186.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">696.72</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">79.37</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">882.52</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209004</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">IOF (DESPESA)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">84.94</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">62.86</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">60.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">432.32</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">153.99</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">149.87</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">274.44</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">115.9</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">170.4</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2208.15</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">277.51</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">614.79</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209006</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">IPTU + TAXA ANUAL (DESP.ANTEC)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4820.9399999999996</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6266.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1734.14</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9347.86</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2940.87</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1018.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1018.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">214.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">214.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7626.51</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2067.5700000000002</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1852.97</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209007</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ISS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">128030.55</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">130038.85</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">179571.57</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">127507.1</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">144341.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">151478.26</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">148041.07999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">133895.93</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">145964.45000000001</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">137502.5</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">148974.5</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">159339.93</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209008</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ISS RETIDO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">152658.01</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">155405.23000000001</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">193252.66</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">181142.18</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">162045.71</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">185216.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">166784.24</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">152910.72</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">172401.03</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">161553.63</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">171197.03</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">179636.01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209009</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PIS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1777.6</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">252.06</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">207.19</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1053.24</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">207.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">224.09</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">479.54</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">270.69</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1227.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">322.7</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">2027.01</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2468.37</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209010</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">COFINS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">8354.0400000000009</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1487.29</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1267.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5133.54</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1214.67</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1315.16</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2505.91</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1601.94</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5974.42</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1847.04</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">9723.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11694.48</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209011</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">INSS DESONERADO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">65582.75</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">56134.6</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">77583.600000000006</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">57931.73</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">64846.9</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">68686.429999999993</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">69642.240000000005</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">66774.67</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">73980.63</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">72126.210000000006</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">75573.78</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">84624.66</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209012</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">INSS (RETIDO)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1119.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1148.0999999999999</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1180.52</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1763.04</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1570.13</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1583.61</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1607.68</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1681.82</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1590.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1642.06</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2946.59</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1608.27</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209013</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">IRPJ</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">357651.94</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">571.79999999999995</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1215.8800000000001</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">461983.99</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4578.3599999999997</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2448.4899999999998</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">439874.32</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10051.91</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5186.67</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">417289.06</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">10757.27</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209014</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">CSLL</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">112267.65</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">181.64</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">615.12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">135865.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1989.15</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1765.26</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">147572.01999999999</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3356.96</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1793.45</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">125463.18</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">4009.21</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">212.21</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209015</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">IRRF (TERCEIROS)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">94160.68</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">127518.46</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">94070.5</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">107516.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">105279.2</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">103363.06</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">98985.19</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">102542.65</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">99997.25</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">102147.89</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">106159.79</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">111744.11</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209016</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">IRRF (APLICACAO)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1888.67</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209017</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">CSRF (TERCEIROS)</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">282436.96999999997</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">372273.69</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">289398.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">328456.84000000003</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">326303.2</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">315536.07</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">307084.37</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">315579.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">306307.21999999997</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">316019.03999999998</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">328872.09999999998</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">334328.45</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209018</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">IPTU - DESP</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6839.22</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7857.05</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">7302.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">7302.74</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209022</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SIMPLES - PARCELAMENTO - DIVIN</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">750</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0209024</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">IRRF (TERCEIROS) 3208</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3216.04</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2251.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2251.19</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2766.83</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2703.15</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2735.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4195.3999999999996</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4083.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4180.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4180.25</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">4350.75</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4356.09</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0209026</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SIMPLES - PARCELAMENTO-SIRIUS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">499.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">501.26</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">502.45</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">503.56</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">504.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">506.13</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">507.71</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">509.27</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">510.57</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">511.87</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">513.37</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">514.82000000000005</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0210003</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ANUNCIOS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10833.34</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">10833.34</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0210005</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PATROCINIOS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3260.17</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">16739.830000000002</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2500</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2831</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2500</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2500</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5900</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">3000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2500</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0210006</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">BRINDES</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2029.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">586.47</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">255.64</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">77.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3353.4</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0210007</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">DESPESAS COM EVENTOS EXTERNOS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2565.33</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1450</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7500.93</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">16734.39</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">28943.99</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">27818.1</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">25342.09</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">23666.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">48722.05</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">39550.04</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">37701.99</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">35174.199999999997</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0210008</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">PERDAS COMERCIAIS - DISTRATO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211001</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MATERIAL DE CONSUMO E ESCRITOR</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3351.15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5889.01</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2269.58</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3967.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2469.36</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1341.49</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4646.55</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3018.49</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6403.16</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1039.7</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">530.99</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1375.37</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211002</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MATERIAL DE LIMPEZA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2022.75</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2219.1999999999998</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">579.15</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1278.43</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3382.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1292.92</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1420.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1917.79</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1522.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2981.05</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1555.47</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3636.42</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211003</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">BENS DE NATUREZA PERM. PEQ VAL</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1766.72</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1115.43</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3850.56</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1496.38</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4472.29</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2749.72</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3523.22</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1293.07</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1653.56</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3897.74</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">2009.83</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4783.41</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211004</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">CORREIO E MALOTE</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">421.06</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">471.27</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">946.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1309.1099999999999</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">141.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">119.3</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">267.62</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">40.4</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">249.1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">384.98</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1392.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1441.22</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211005</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">COPIAS E AUTENTICACOES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">122.11</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">22.58</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">176.79</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">104</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">202.8</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">27.42</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">64.13</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">209.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">51.11</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211007</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">LICENCAS E SOFTWARE (DES.ANTEC</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">450.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5067.71</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1710.04</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">3144.72</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1768.29</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">319.33999999999997</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">319.33999999999997</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">30563.05</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">593.32000000000005</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4906.3500000000004</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1451.36</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13116.55</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211008</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">CUSTAS PROCESSUAIS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">259.08</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211009</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ROYALTIES</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11421.65</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10949.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11903.89</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11692.05</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11140.83</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">14212.85</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11620.24</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12484.41</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12202.5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10738.83</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">13215.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">17446.13</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211010</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">TELEFONE FIXO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">334.14</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">335.58</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">340.78</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">516.16</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">329</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211011</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">TELEFONE CELULAR</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12010.27</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11983.04</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12232.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12141.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12158.11</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12137.91</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12133.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11953.29</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12377.75</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">12399.57</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">13499.79</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211012</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">INTERNET</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4038.95</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1669.89</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4070.35</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2767.83</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4511.87</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4701.99</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2843.7</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2931.52</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6094.67</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2868.95</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">2961.48</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4277.42</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211013</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ROYALTIES CTT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">295.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211014</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">LICENCAS E SOFTWARE C/ RET DES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2455.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2455.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2455.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2455.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2455.12</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211015</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">APARELHO CELULAR - DESCONTO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12115.66</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211016</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">LICENCA E SOFTWARE (DESP)S/RET</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1925.4</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1757.29</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1694.44</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1754.79</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1938.59</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4845.57</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4309.24</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1683.93</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9185.92</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6267.51</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">3759.18</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">9434.4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211017</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">FORNECEDOR CPA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2010</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1120</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">560</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1360</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211018</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">FRETES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">44.66</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">17353</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3231.55</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211019</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ASSINATURA JORN/REVIS (DESP)</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">259.8</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">129.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">129.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211021</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">FORNECEDOR PF</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">560</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2760</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1120</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">980</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1760</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">630</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2060</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1010</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">630</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">560</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0211023</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MANUTENCAO GARANTIDA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6.71</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6.71</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">48.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">42.2</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">151.38</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">151.38</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">151.38</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">151.38</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">151.38</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">151.38</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">151.38999999999999</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">109.18</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0211024</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MATERIAL CAFE / LANCHE</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1527.11</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4214.84</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5367.89</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4354.8100000000004</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6179.46</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3728.76</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4892.97</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5537</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4600.5600000000004</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">4942.97</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5704.31</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0218004</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">TARIFA BANCARIA</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">42.49</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4.99</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">33.770000000000003</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4.99</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23.74</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">23.74</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">23.74</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0218009</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MULTAS FISCAIS</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">104.12</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0301001</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ADIANTAMENTO DE FORNECEDOR</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">27932.94</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">19636.59</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">138911.6</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">33666.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">508556.52</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">68905.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">246354.56</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">16172.85</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">17121.63</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">12539.1</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">24341.82</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">168061.63</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0301003</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ADIANTAMENTO DE CLIENTES</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2400</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">757.94</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7491.73</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0301004</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ADIANTAMENTO DE VIAGEM</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">630</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1231</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1052</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1050</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">420</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">560</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">700</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1330</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1750</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">910</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1322.83</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0301005</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ADIANT VIAGEM REEMBOLSADA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2994.52</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4087.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2595.65</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2967.27</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7704.81</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7203.34</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7823.82</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4123.6400000000003</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5280.04</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5438.22</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">3182.8</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2911.16</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0301010</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">DESPESAS REEMBOLSAVEIS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9761.35</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">531.62</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2995.08</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1074.33</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5438.64</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1882.95</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4941.5200000000004</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5451.82</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">31890.18</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">6081.02</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">14477.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4537.12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0301012</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">CAUCAO SEGURO GARANTIA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2849.58</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2353.6</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0302002</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MUTUOS - JRP</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10026</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0302006</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">VENDA DE BENS A RECEBER</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">50000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2304.14</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">85000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0302008</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">OUTROS CREDITOS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">79.88</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">57.75</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">115.51</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">4704.13</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0303001</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">IMOBILIZADO EM ANDAMENTO</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2254</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2254</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0303002</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">TRANSITORIA DO ATIVO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">33950.269999999997</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">192188.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">141730.93</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">9419.7900000000009</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">507118.89</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">60419.87</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">255548.71</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">38992.54</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">27613.32</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">19211.84</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">15240.25</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">21949.46</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0303003</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">BENFEITORIAS IMOVEIS TER C/RET</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">17069.57</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">11016.11</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">10909.69</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3444.45</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3626.25</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6005.49</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0303004</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">BENS ADQUIRIDOS A PAGAR</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11170.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11170.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11170.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11170.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11170.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11170.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">11170.7</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0303005</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">BENFEITORIAS IMOVEIS TER</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">96.1</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5452</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1238.3399999999999</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">13674.17</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">28975.34</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">6119.29</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">18808.509999999998</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">7557.23</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">5636.33</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4508.3599999999997</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">2083.06</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1243.9100000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0304021</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">TRANSFERENCIA ENTRE C/C</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">514800</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">2616000</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">5376.7</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0305001</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">DISTRIBUICAO DE LUCROS  MENSAL</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">173101</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">173101</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">176469.59</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">180018.21</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">180018.21</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0305002</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">DISTRIBUICAO DE LUCROS - 13 DL</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">224883.97</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0305003</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">DISTRIBUICAO DE LUCROS EXTRA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2215924.11</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2935154</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1480000</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">45497.24</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2300329.2400000002</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">2500000</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1505000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0305004</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">DISTRIBUICAO LUCROS-PREMIACAO</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">215924.11</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0306003</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">TRANSF MATRIZ X JUIZ DE FORA</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">122.62</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">122.62</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">104.13</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">0306009</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">TRANSF IMPOSTOS E ENCARGOS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">784126.18</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">555833.28</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">619916.49</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">627027.91</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">566528.72</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">602567.85</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">587503.82999999996</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">583970.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">616950.9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">592711.36</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">613703.19999999995</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">685315.13</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">0307005</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">TRANSF BAHIA X SERGIPE</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">137.16</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>12</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
