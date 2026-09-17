@@ -9,7 +9,7 @@ Function U_ROT002() //user function
 
     oBrowse := FWmBrowse():New()
     oBrowse:SetAlias("Z07") //tabela que vai puxar
-    oBrowse:AddLegend("Z07->Z07_VALOR >= 100", "PINK", "maior que 100") //legendas lógico
+    oBrowse:AddLegend("Z07->Z07_VALOR >= 100", "PINK", "maior que 100") //legendas logico
     oBrowse:AddLegend("Z07->Z07_VALOR >= 100", "BLUE", "menor que 100")
     oBrowse:SetDescription("Manutençao Regioes de Frete - Ana") //o titulo da pagina
     oBrowse:Activate()
