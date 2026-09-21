@@ -1,5 +1,6 @@
-## Anotações sobre ADVPL, Protheus, testes e demais ...
+# Anotações sobre ADVPL, Protheus, testes e demais ...
 
+## Sobre a linguagem
 ### ADVPL tradicional
 - linguagem proprietária da TOTVS para o ERP TOTVS Protheus
 - baseada em clipper
@@ -26,3 +27,17 @@
 - a declaração de funções, variáveis, atributor de classes e métodos passa a poder ser tipada de forma explicita
 - possui tratamentos em tempo de compilação para prevenção de erros
 - não é compatível com ADVPL MVC
+
+## Escopos
+### Escopo de funções
+- Function: escopo das funções desenvolvidas pela equipe de desenvolvimento da TOTVS
+- Main Function: escopo para funções principais que podem ser acionadas a partir da janela de parametros iniciais do smartclient (usada na construção de funções associadas a módulos, ex.: SIGAFAT)
+- User Function: escopo de funções desenvolvidas por desenvolvedores de fora da equipe oficial da TOTVS. como alternativa, é possível declarar como "U_" antes do nome
+    - ex.: User Function TESTE == Function U_TESTE
+- Static Function: escopo destinado a funções de uso auxiliar para demais funções escritas no mesmo arquivo de código fonte
+
+### Escopo de variáveis
+- Local: determina que a variável poderá ser manipulada apenas na função em que foi declarada
+- Private: determina que a variável declarada com este escopo ficará disponível no programa em que foi declarada e por todas as funções acionadas a partir dele e enquanto ele existir
+- Static: utilizado para variáveis que podem ser acessadas por qualquer função em qualquer lugar do arquivo. são declaradas fora das funções
+- Public: a variável continua existindo dentro da thread em que aquela função foi acionada
