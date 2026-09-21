@@ -130,3 +130,47 @@ data_login < date()     .F.
 data_login >=
 data_login <=
 ```
+
+### Operadores incrementais (++) e decrementais (--)
+#### Pósfixado
+```
+total  := 0
+numero := 10
+total  := numero++ + 10     numero == 11 | total == 20
+total1 := numero-- - 10     numero == 10 | total == 20
+```
+#### Préfixado
+```
+total   := ++numero + 10    numero == 11 | total == 21
+total1  := --numero - 10    numero == 10 | total == 0
+```
+
+### Operadores especiais
+- -> operador de apelido: usado para relacionar um campo a uma tabela ou area de memoria
+```
+M->A1_COD := ''
+```
+- () operador de agrupamento ou função
+```
+(total1 := numero + paramento, total2 := numero - parametro * 2)
+(p1,p2)
+```
+- $ operador de macrosubstituição
+```
+total := &('numero') + 10
+```
+- {} operador de matriz ou bloco de código
+```
+lista_numeros := {10,20,30}
+bloco := {|| fwAlertInfo('ok')}
+```
+- @ passagem de parametro por referencia
+```
+numero := 10
+paramento := 10
+soma_numeros(@numero, parametro)
+
+Static Function soma_numeros(p1,p2)
+    p1 := p1 * p2   p1 modifica o valor guardado em numero, pois acessa a área de memória | numero == 100 p1 == 100
+    p2 := p1        p2 recebe resultado de p1 sem alterar a área de memória de parametro | paramentro == 10 p2 == 100
+```
