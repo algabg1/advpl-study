@@ -41,3 +41,29 @@
 - Private: determina que a variável declarada com este escopo ficará disponível no programa em que foi declarada e por todas as funções acionadas a partir dele e enquanto ele existir
 - Static: utilizado para variáveis que podem ser acessadas por qualquer função em qualquer lugar do arquivo. são declaradas fora das funções
 - Public: a variável continua existindo dentro da thread em que aquela função foi acionada
+
+## Tipagem de variáveis
+### ADVPL
+- xVar := nil                   valType() => U variant
+- cVar := 'Texto'               valType() => C Texto
+- dVar := date()                valType() => D Data
+- nVar := 99                    valType() => N Numerico
+- lVar := .T.                   valType() => L Logico
+- bVar := {|| alert('ok')}      valType() => B Bloco de código
+- oVar := fwJsonObject():new()  valType() => O Objeto
+- aVar := array(0)              valType() => A Array
+
+### TLPP
+- xVarTipoVariant   as variant      o conteúdo pode mudar ao longo do programa
+- nVarTipoInteiro   as integer      inteiros
+- nVarTipoNumeric   as numeric      inteiros e pontos flutuantes
+- nVarTipoDouble    as double       ponto flutuante
+- nVarTipoDecimal   as decimal      número de casas decimais específico
+- lVarTipoLogico    as logical      para conteúdos do tipo lógico .T. ou .F.
+- cVarTipoTexto     as character    conteúdos do tipo texto, tanto caracter quanto string
+- dVarTipoData      as date         data
+- bVarTipoBloco     as codeblock    bloco de código
+- oVarTipoObject    as object       objeto
+- oVarTipoJson      as json         json
+- aVarTipoArray     as array        array
+
