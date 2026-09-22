@@ -174,3 +174,43 @@ Static Function soma_numeros(p1,p2)
     p1 := p1 * p2   p1 modifica o valor guardado em numero, pois acessa a área de memória | numero == 100 p1 == 100
     p2 := p1        p2 recebe resultado de p1 sem alterar a área de memória de parametro | paramentro == 10 p2 == 100
 ```
+
+## Estruturas de decisão
+### If Else
+```
+Local primeiroNumero := 10 as integer
+Local segundoNumero  := 20 as integer
+Local somaNumeros    := 0
+
+//estrutura normal
+If primeiroNumero > segundoNumero
+    somaNumeros := primeiroNumero + segundoNumero
+Else
+    somaNumeros := segundoNumero - primeiroNumero
+EndIf
+
+//usando o comando IF como função
+somaNumeros := IF(primeiroNumero > segundoNumero, primeiroNumero + segundoNumero, segundoNumero - primeiroNumero)
+
+//usando ElseIf
+If primeiroNumero > segundoNumero
+    fwAlertInfo('primeiroNumero é maior')
+ElseIf primeiroNumero = segundoNumero
+    fwAlertWarning('numeros iguais')
+ElseIf segundoNumero < primeiroNumero
+    fwAlertInfo('primeroNumero é menor')
+Else
+    fwAlertError('ERRO')
+EndIf
+```
+
+### Do Case
+```
+DO CASE
+    CASE primeiroNumero > segundoNumero
+        fwAlertInfo('primeiroNumero é maior')
+    CASE primeiroNumero = segundoNumero
+        fwAlertWarning('numeros iguais')
+    OTHERWISE
+        fwAlertError('primerioNumero é menor')
+```
