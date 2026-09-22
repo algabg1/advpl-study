@@ -245,12 +245,53 @@ eval(bBlocoExemplo, 'Esse é um texto de exemplo de bloco de código', 'Esse é 
 
 ## Arrays
 ```
-Local aExemplo := {} as array
+Local aExemplo1 := {} as array
+Local aExmeplo2 := {'1', '2', 3, '4', 6, .T., {|| alert('ok')}, nil} as array
+Local aExemplo3 := array(0) as array
+Local aExemplo4 := array(2) as array
+Local aExemplo5 := array(1, {'5', '4', '3'})
+Local aExemplo6 := {{5, 6, 7}, {'Opção 5', 'Opção 6', 'Opção 7'}}
+```
+- aadd(array, conteudo) | adiciona conteúdo a uma array
+```
+aadd(aExemplo1, 1)
+aadd(aExemplo1, 2)
+aadd(aExemplo1, '3')
+
+aadd(aExemplo2, {'1', '2', 3, {'teste1', 'teste2'}})
+```
+- atribuindo conteúdo
+```
+//aExemplo4 está vazio e tem dois espaços
+aExemplo4[1] := 'Opção 1'
+aExemplo4[2] := 'Opção 2'
+aadd(aExemplo4, 'Opção 3') //agora tem três espaços
+```
+- matriz
+```
+aadd(aExemplo3, (1, 'Opção 1'))
+aadd(aExemplo3, (2, 'Opção 2'))
+aadd(aExemplo3, (4, 'Opção 4'))
+aadd(aExemplo3, (5, 'Opção 5'))
+
+aExemplo3[4,1] := 3
+aExemplo3[4][2] := 'Opção 3'
 ```
 
-## Algumas coisas diferentes
+## Algumas coisas
 - variadic: uma forma de dizer que essa função pode receber um número indefinido de parâmetros. o que determina o número de parametros é na chamada da função
 ```
 Static Function executar(xParam as variadic)
     eval(xParam:vArgs[1], xParam:vArgs[2], xParam:vArgs[3])
+```
+- aSort(): ordenação
+```
+//ordena a array de forma decrescente
+aSort(aExemplo3,,, {|x,y| x[1] > y[1]})
+
+//ordena a array de forma crescente
+aSort(aExemplo3,,, {|x,y| x[1] < y[1]})
+
+//ordena na posição da matriz
+aSort(aExemplo5[1],,, {|x,y| x > y})
 ```
