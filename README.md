@@ -214,3 +214,22 @@ DO CASE
     OTHERWISE
         fwAlertError('primerioNumero é menor')
 ```
+
+## Estruturas de repetição
+```
+Local x
+Loxal nFor := 100
+Local nWhile := 100
+
+//While (enquanto uma condição não é atendida)
+While nWhile > 0
+    nWhile--
+Enddo
+
+//For (repetições de acordo com um número definido de execuções)
+For x := 1 To nFor
+    nWhile++
+Next
+
+For x := 1 to nFor Step 5 //de 5 em 5
+```
