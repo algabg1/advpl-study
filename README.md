@@ -233,3 +233,24 @@ Next
 
 For x := 1 to nFor Step 5 //de 5 em 5
 ```
+
+## Blocos de código
+```
+Local bBlocoExemplo := {|cTexto, cTitulo| fwAlertInfo(cTexto, cTitulo)} as codeblock
+```
+- eval() função que executa bloco de código
+```
+eval(bBlocoExemplo, 'Esse é um texto de exemplo de bloco de código', 'Esse é o titulo da janela')
+```
+
+## Arrays
+```
+Local aExemplo := {} as array
+```
+
+## Algumas coisas diferentes
+- variadic: uma forma de dizer que essa função pode receber um número indefinido de parâmetros. o que determina o número de parametros é na chamada da função
+```
+Static Function executar(xParam as variadic)
+    eval(xParam:vArgs[1], xParam:vArgs[2], xParam:vArgs[3])
+```
